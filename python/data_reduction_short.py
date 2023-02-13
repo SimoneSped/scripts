@@ -2,11 +2,8 @@
 """
 Created on Mon Jan 30 12:25:23 2023
 
-@author: Group 3
+@author: Group 2
 """
-
-
-
 
 import numpy as np, glob, astropy.io.fits as fits
 science_df = (np.array([fits.getdata(path) for path in glob.glob("data/H/VIRCAM_H_SCIENCE_DIT2.0_NDIT25*.fits")]) - fits.getdata("data/masterdark_H_dit2_ndit25.fits"))/fits.getdata("data/masterflat_H_dit3_ndit1.fits")
